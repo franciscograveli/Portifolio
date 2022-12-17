@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="imagens/sem-fundo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Portfólio</title>
+</head>
+<body>
+    <!-- container para controlar a pagina toda, margens, fonts, etc -->
+   <div class="container">
+
+        <div class="hamburguer">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <span>Fechar</span>
+        </div>
+
+       <header>
+        <!-- wrapper= embrulho, para a imagem se tornar mais responsivel -->
+           <div class="img-wrapper" id="home">
+            <img src="imagens/bg.jpg" alt="">
+           </div>
+           <div class="banner">
+           <!-- Letras maisculas no CSS, não usar no html pela acessibilidade -->
+           <h1>Desenvolvedor</h1>
+           <p>Francisco Graveli</p>
+         </div>
+       </header>
+       <aside class="sidebar">
+           <nav>
+               <ul class="menu">
+                   <li class="menu-item"><a href="#home" class="menu-link">Home</a></li>
+                   <li class="menu-item"><a href="#conhecimento" class="menu-link">Conhecimento</a></li>
+                   <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                   <li class="menu-item"><a href="" class="menu-link">Contato</a></li>
+               </ul>
+           </nav>
+           <div class="social-media">
+               <a href="https://www.linkedin.com/in/francisco-carlos-609192142/"><i class="fab fa-linkedin-in"></i>"></i></a>
+               <a href="https://www.instagram.com/junior_santos.sk8/"><i class="fab fa-instagram"></i></a>
+               <a href="https://github.com/franciscograveli"><i class="fab fa-github-alt"></i></a>
+            </div>
+       </aside>
+
+           
+       <section class="sessao-conhecimentos">
+           <div id="page">
+      
+           <div class="sessao-header" id="conhecimentos">
+               <h1>Conhecimentos</h1>
+          </div>
+          <main>
+     <div id="tabs">
+                  <div class="tab-links">
+                    <button data-id="css"><i class="fab fa-css3-alt"></i>
+                    </button>
+                    <button data-id="ht"><i class="fab fa-html5" aria-hidden="true"></i></button>
+                    <button data-id="js"data-open><i class="fab fa-js-square"></i></button>
+                    <button data-id="bootstrap"><i class="fab fa-bootstrap"></i></button>
+                    <button data-id="design"><i class="fa fa-pencil-ruler" aria-hidden="true"></i></button>
+                  </div>
+                 <div class="tab-content">
+                     <section id="css">
+                         <h2>CSS3</h2>
+                         <p>É uma "folha de estilo" composta por “camadas” e utilizada para definir a apresentação (aparência) em páginas da internet que adotam para o seu desenvolvimento linguagens de marcação (como XML, HTML e XHTML).</p>
+                     </section>
+                     <section id="ht">
+                        <h2>HTML5</h2>
+                        <p> É uma linguagem de marcação para a World Wide Web e é uma tecnologia chave da Internet, originalmente proposto por Opera Software. É a quinta versão da linguagem HTML. Possibilita o uso de novos recursos antes possíveis apenas com a aplicação de outras tecnologias.</p>     
+                    </section>
+                     <section id="js">
+                        <h2>JavaScript</h2>
+                        <p>É uma linguagem de script orientada a objetos, multiplataforma. É uma linguagem pequena e leve. Dentro de um ambiente de host (por exemplo, um navegador web) o JavaScript pode ser ligado aos objetos deste ambiente para prover um controle programático sobre eles.</p>
+                     </section>
+                     <section id="bootstrap">
+                        <h2>Bootstrap</h2>
+                        <p>É uma ferramenta gratuita para desenvolvimento HTML, CSS e JS. Portanto, é uma ferramenta de código fonte aberto para todos. Contudo, hoje em dia, é o framework Front End mais conhecido e mais utilizado pelo mundo.</p>
+                     </section>
+                     <section id="design">
+                        <h2>Design</h2>
+                        <p>O Web Design envolve trabalhos ligados à layout e design de páginas online assim como produção de conteúdos, embora costume ser mais aplicado à criação de sites.</p>
+                     </section>      
+                   </div>
+    </div>
+          </main>
+          </div>
+       </section>
+    <div class="desenvolvimento">
+        <div class="canvas">
+        <a href="https://1drv.ms/w/s!AuK0LOUBR0kHgZ8hCA0llZywWSRAjA">Saiba Mais Sobre Mim</a>  
+     
+        </div> <div class="gif"><img src="https://i.gifer.com/7Uz.gif" ></div>
+    </div>
+
+
+   </div>
+
+</body>
+<script src="script.js "></script>
+<script src="https://kit.fontawesome.com/95ed0ef562.js" crossorigin="anonymous"></script>
+
+
+
+</html>
