@@ -2,11 +2,82 @@
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 /* "*"= todos conteudos da pagina tomam certa atitude */
-*{margin: 0; padding: 0;list-style: none;text-decoration: none;color: white;}
+@font-face {
+    font-family: montserrat;
+    src: url(../Portifolio/assets/font/montserrat/static/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: playfair;
+    src: url(../Portifolio/assets/font/playfair/static/PlayfairDisplay-Bold.ttf);
+}
+*{margin: 0; padding: 0;list-style: none;text-decoration: none; font-family: montserrat; }
+body{
+    color: #ddd;
+    background-color: var(--bg-color);
+    transition: 0.5s;
+}
+.bg1{
+    background-color: var(--bg-color);
+    transition: 1s ;
+}
+.bg2{
+    background-color: var(--bg1-color);
+    transition: 1s ;
+}
+.bg3{
+    background-color: var(--bg2-color);
+    transition: 1s ;
+}
+.bg4{
+    background-color: var(--bg3-color);
+    transition: 1s ;
+}
+#bt1{
+    background-color: var(--t2-color);
+}
+#bt2{
+    background-color: var(--t4-color);
+}
+#bt3{
+    background-color: var(--t3-color);
+}
+#bt4{
+    background-color: var(--t5-color);
+}
+.bgt1{
+    color: var(--t2-color) !important;
+    transition: 0.5s;
+}
+.bgt2{
+    color: var(--t4-color) !important;
+    transition: 0.5s;
+}
+.bgt3{
+    color: var(--t3-color) !important;
+    transition: 0.5s;
+}
+.bgt4{
+    color: var(--t5-color) !important;
+    transition: 0.5s;  
+}
 
 :root{ --font-primary: "Baloo Da 2", serif;
     --font-secundary: "Josefim Slab",serif;
     --font-action: "Muli",serif;
+}
+:root{
+    --primary-color: #1d1d1d;
+    --secondary-color: #1d1d1d;
+    --tertiary-color: #1d1d1d;
+    --t1-color: white;
+    --t2-color: #ddd;
+    --t3-color: #04ff04;
+    --t4-color:  #ffff00;
+    --t5-color: #9400d3;
+    --bg-color: #1d1d1d;
+    --bg1-color: #000;
+    --bg2-color: #19302b;
+    --bg3-color: white;
 }
 .hamburguer{ 
     top: 1.5rem;
@@ -28,7 +99,6 @@
 .line{
     box-shadow: 0.1rem 0.07rem 1.5px #5c5b5baf;
    border-radius: .22rem;
-    background-color: lightgray;
     width: 100%;
     height: .22rem;
     transition: 1.5s;
@@ -90,73 +160,97 @@
 .show-menu .hamburguer:hover span::before{
     opacity: 1;
 }
-header{width: 100%;
-    height: 100vH;/* vH = view height/ altura da view */ 
-    overflow: hidden;
-    position: relative;
+
+
+
+header{
+    min-height: 100vh;
+    height: 100%;
 }
 
-.img-wrapper{
-    width: 100%; 
-    height: 100%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-.img-wrapper img{
-    width: 100%; 
-    height: 100%;
-    /* object-fit vou usar para declarar como o objeto vai ser dimensionado dentro do wrapper */
-    /* cover eu uso para cobrir toda  adiv, resolvendo a questão da responsabilidade */
-    object-fit: cover;
-    opacity: 0.55;
-    animation: zoom 5s;
-}
-@keyframes zoom{
-    0%{transform: scale(1.1);}
-    100%{ transform: scale(1);}
-}
-.banner{ 
+.container-header{
     position: absolute;
-    top: 15%;
-    left: 10%;
-    right: 5%;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
+
+.banner{
+    width: 100%;
+    height: auto;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
 .banner h1{
-    color: #fff;
-    /* evitar usar pixel pela acessibilidade */
-    /* em = proporção em relação ao elemento pai */
-    /* rem = em relação ao elemento principal */
-    font-size: 3.5rem;
-    font-family: var(--font-primary);
-    font-weight: 0px;
-    text-shadow: .2rem .3rem 2.5px rgba(0, 0, 0, 0.5);
-    line-height: 4.5rem;
-    animation: moveBanner 1s 0.5 forwards;
-    opacity: 0;
+    font-size: calc(2.5rem + 3vw);
+    line-height: 100%;
+    font-family: playfair;
+    margin-bottom: 0.5rem;
+    width: 100%;
 }
-.banner p{ color: #fff;
-    
-    font-family: var(--font-secundary);
-    font-size: 1.5rem;
-    text-shadow: .1rem .12rem rgba(0, 0, 0, 0.5);
-    line-height: 4.5rem;
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-    animation: moveBanner 1s 0.9s forwards;
-    opacity: 0;
+.banner p{
+    color: var(--t2-color);
+    margin-bottom: 1rem;
 }
-
-   
-@keyframes botao{
-    0%{ background: #00B4DB; }
-    100%{ background: #000000; }
-}
-
-@keyframes moveBanner{
-    0%{transform: translateY(10rem) rotateY(-30deg); opacity: .3;
+@media (max-width: 992px) {
+    .banner h1{
+        font-size: calc(1.5rem + 5vw);
     }
-    100%{transform: translateY(0rem) rotateY(0); opacity: 1;}
+    .banner p{
+        font-size: calc(0.5rem + 1vw);
+    }
 }
+.container-header .colors {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.container-header .colors .text-color{
+    text-align: center;
+    justify-self: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.container-header .colors .ball{
+    cursor: pointer;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    border-radius: 100%;
+    border: var(--t3-color) 1px solid;
+    border: 2px solid transparent;
+    animation: rainbow 5s infinite alternate;
+}
+#b1{background-color: var(--bg-color);}
+#b2{background-color: var(--bg1-color);}
+#b3{background-color: var(--bg2-color);}
+#b4{background-color: var(--bg3-color);}
+#b1:hover,#b2:hover,#b3:hover,#b4:hover,
+#bt1:hover,#bt2:hover,#bt3:hover,#bt4:hover{
+    filter: drop-shadow(var(--t3-color) 0px 0px 10px);
+    transition: 0.5s;
+}
+
+@keyframes rainbow {
+    0% {border-color: var(--bg1-color);}
+    25% {border-color:  var(--bg2-color);}
+    50% {border-color:  var(--bg3-color);}
+    100% {border-color: var(--bg-color);}
+  }
 .sidebar{
     position: fixed;
     top:0;

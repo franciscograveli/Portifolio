@@ -3,18 +3,16 @@
 <head>
     
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="imagens/ico/iconCode.ico" />
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
-    <link rel="icon" type="image/jpg" sizes="32x32" href="imagens/sem-fundo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+    
     <link rel="manifest" href="/site.webmanifest">
     <title>Portfólio</title>
 </head>
 <body>
     <!-- container para controlar a pagina toda, margens, fonts, etc -->
-   <div class="container">
+   <div class="container" >
 
         <div class="hamburguer">
             <div class="line" id="line1"></div>
@@ -25,14 +23,92 @@
 
        <header>
         <!-- wrapper= embrulho, para a imagem se tornar mais responsivel -->
-           <div class="img-wrapper" id="home">
-            <img src="imagens/bg.jpg" alt="">
-           </div>
+        
+        <div class="container-header">
+           
            <div class="banner">
            <!-- Letras maisculas no CSS, não usar no html pela acessibilidade -->
-           <h1>Desenvolvedor</h1>
-           <p>Francisco Graveli</p>
-         </div>
+           <div><h1 id="display">Hello, I'm<br>Francisco Carlos</h1></div>
+           <div class="center-text"><p>i'm a developer, actually learning more about backend with C++ and Python, but lovely for JS and frontend</p></div>
+           
+           </div>
+           <div class="colors" >
+            <div class="text-color">Background Color:</div>
+            <span class="ball" id="b1"></span>
+            <span class="ball" id="b2"></span>
+            <span class="ball" id="b3"></span>
+            <span class="ball" onclick="abrirAlerta()" id="b4"></span>
+            <div class="text-color" >Text Color:</div>
+            <span class="ball" id="bt1"></span>
+            <span class="ball" id="bt2"></span>
+            <span class="ball" id="bt3"></span>
+            <span class="ball" id="bt4"></span>
+
+            <script>
+                document.getElementById('b1').addEventListener('click', (e)=>{
+                  document.body.classList.add('bg1');
+                  document.body.classList.remove('bg2');
+                  document.body.classList.remove('bg3');
+                  document.body.classList.remove('bg4');
+                });
+                document.getElementById('b2').addEventListener('click', (e)=>{
+                    document.body.classList.add('bg2');
+                    document.body.classList.remove('bg1');
+                    document.body.classList.remove('bg3');
+                    document.body.classList.remove('bg4');
+                });
+                document.getElementById('b3').addEventListener('click', (e)=>{
+                    document.body.classList.add('bg3');
+                    document.body.classList.remove('bg1');
+                    document.body.classList.remove('bg2');
+                    document.body.classList.remove('bg4');
+                });
+                document.getElementById('b4').addEventListener('click', (e)=>{
+                    document.body.classList.add('bg4');
+                    document.body.classList.remove('bg3');
+                    document.body.classList.remove('bg1');
+                    document.body.classList.remove('bg2');
+                });
+                document.getElementById('bt1').addEventListener('click', (e)=>{
+                    document.body.classList.add('bgt1');
+                    document.body.classList.remove('bgt2');
+                    document.body.classList.remove('bgt3');
+                    document.body.classList.remove('bgt4');
+                    document.getElementById('line1').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t2-color);")
+                    document.getElementById('line2').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t2-color);")
+                    document.getElementById('line3').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t2-color);")
+                  });
+                document.getElementById('bt2').addEventListener('click', (e)=>{
+                    document.body.classList.add('bgt2');
+                    document.body.classList.remove('bgt3');
+                    document.body.classList.remove('bgt4');
+                    document.body.classList.remove('bgt1');
+                    document.getElementById('line1').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t4-color);")
+                    document.getElementById('line2').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t4-color);")
+                    document.getElementById('line3').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t4-color);")
+                  });
+                document.getElementById('bt3').addEventListener('click', (e)=>{
+                    document.body.classList.add('bgt3');
+                    document.body.classList.remove('bgt1');
+                    document.body.classList.remove('bgt2');
+                    document.body.classList.remove('bgt4');
+                    document.getElementById('line1').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t3-color);")
+                    document.getElementById('line2').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t3-color);")
+                    document.getElementById('line3').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t3-color);")
+                  });
+                document.getElementById('bt4').addEventListener('click', (e)=>{
+                    document.body.classList.add('bgt4');
+                    document.body.classList.remove('bgt1');
+                    document.body.classList.remove('bgt2');
+                    document.body.classList.remove('bgt3');
+                    document.getElementById('line1').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t5-color);")
+                    document.getElementById('line2').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t5-color);")
+                    document.getElementById('line3').setAttribute("style","box-shadow:0.1rem 0.07rem 1.5px var(--t5-color);")
+                  });
+                
+            </script>
+           </div>
+        </div>
        </header>
        <aside class="sidebar">
            <nav>
@@ -51,7 +127,7 @@
        </aside>
 
            
-       <section class="sessao-conhecimentos">
+       <!-- <section class="sessao-conhecimentos">
            <div id="page">
       
            <div class="sessao-header" id="conhecimentos">
@@ -92,13 +168,13 @@
     </div>
           </main>
           </div>
-       </section>
-    <div class="desenvolvimento">
+       </section> -->
+    <!-- <div class="desenvolvimento">
         <div class="canvas">
         <a href="https://1drv.ms/w/s!AuK0LOUBR0kHgZ8hCA0llZywWSRAjA">Saiba Mais Sobre Mim</a>  
      
-        </div> <div class="gif"><img src="https://i.gifer.com/7Uz.gif" ></div>
-    </div>
+        </div> 
+    </div> -->
 
 
    </div>
@@ -106,6 +182,11 @@
 </body>
 <script src="script.js "></script>
 <script src="https://kit.fontawesome.com/95ed0ef562.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>  
+function abrirAlerta(){
+    alert("Be careful when playing with white!");}
+</script>
 
 
 
